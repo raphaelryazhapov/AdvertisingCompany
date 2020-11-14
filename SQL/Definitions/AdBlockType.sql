@@ -1,3 +1,9 @@
+CREATE TABLE AdBlockType
+(
+	[Id] UNIQUEIDENTIFIER PRIMARY KEY,
+	[Name] NVARCHAR(50) 
+);
+
 INSERT INTO AdBlockType
 	(Id, Name)
 VALUES
