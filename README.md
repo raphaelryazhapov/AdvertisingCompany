@@ -12,7 +12,7 @@
 
 ### Backend
 #### contains all business logic and web REST API endpoints for project.
-#### Tools - .Net Core 3.1, C#, ASP.NET Core Web API, Entity Framework Core
+#### Tools - .Net Core 3.1, C#, ASP.NET Core Web API, Entity Framework Core, NLog, Swagger UI
 
 ### Frontend
 #### contains all UI of project
