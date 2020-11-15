@@ -1,0 +1,9 @@
+C:\Users\Raphael\Desktop\Sql\Backend\Backend.Shared\bin\Debug\netcoreapp3.1\Backend.Shared.deps.json
+C:\Users\Raphael\Desktop\Sql\Backend\Backend.Shared\bin\Debug\netcoreapp3.1\Backend.Shared.dll
+C:\Users\Raphael\Desktop\Sql\Backend\Backend.Shared\bin\Debug\netcoreapp3.1\Backend.Shared.pdb
+C:\Users\Raphael\Desktop\Sql\Backend\Backend.Shared\obj\Debug\netcoreapp3.1\Backend.Shared.csprojAssemblyReference.cache
+C:\Users\Raphael\Desktop\Sql\Backend\Backend.Shared\obj\Debug\netcoreapp3.1\Backend.Shared.AssemblyInfoInputs.cache
+C:\Users\Raphael\Desktop\Sql\Backend\Backend.Shared\obj\Debug\netcoreapp3.1\Backend.Shared.AssemblyInfo.cs
+C:\Users\Raphael\Desktop\Sql\Backend\Backend.Shared\obj\Debug\netcoreapp3.1\Backend.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Raphael\Desktop\Sql\Backend\Backend.Shared\obj\Debug\netcoreapp3.1\Backend.Shared.dll
+C:\Users\Raphael\Desktop\Sql\Backend\Backend.Shared\obj\Debug\netcoreapp3.1\Backend.Shared.pdb
