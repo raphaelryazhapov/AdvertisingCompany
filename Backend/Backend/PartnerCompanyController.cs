@@ -15,9 +15,9 @@ namespace Backend.Web
 	[ApiController]
 	public class PartnerCompanyController : ControllerBase
 	{
-		private readonly PartnerCompanyRepository _repository;
+		private readonly IRepository<PartnerCompany> _repository;
 
-		public PartnerCompanyController(PartnerCompanyRepository repository)
+		public PartnerCompanyController(IRepository<PartnerCompany> repository)
 		{
 			_repository = repository;
 		}

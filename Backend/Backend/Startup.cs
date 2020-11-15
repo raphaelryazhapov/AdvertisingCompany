@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Backend.Data;
+using Backend.Data.Entities;
 using Backend.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,7 +28,7 @@ namespace Backend
 					opts.SerializerSettings.ContractResolver = null;
 				});
 
-			services.AddSingleton<PartnerCompanyRepository, PartnerCompanyRepository>();
+			services.AddSingleton<IRepository<PartnerCompany>, PartnerCompanyRepository>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
