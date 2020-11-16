@@ -9,7 +9,12 @@ namespace Backend.Data.Repositories
 {
 	public class AdBlockRepository : IRepository<AdBlock>
 	{
-		private readonly AdvertisingCompanyContext _context = new AdvertisingCompanyContext();
+		private readonly AdvertisingCompanyContext _context;
+
+		public AdBlockRepository(AdvertisingCompanyContext context)
+		{
+			_context = context;
+		}
 		public void Add(AdBlock itemToAdd)
 		{
 			ArgumentValidator.ValidateObjectNotNull(itemToAdd, nameof(itemToAdd));
