@@ -11,6 +11,9 @@ namespace Backend.Data.Entities
 		[Column("Id")]
 		public Guid Id { get; set; }
 
+		[Column("AdBlockTypeId")]
+		public Guid AdBlockTypeId { get; set; }
+
 		[ForeignKey("AdBlockTypeId")]
 		public AdBlockType AdBlockType { get; set; }
 

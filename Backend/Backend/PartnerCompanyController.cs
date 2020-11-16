@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Backend.Data;
 using Backend.Data.Entities;
-using Backend.Data.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Web
 {
@@ -23,6 +18,8 @@ namespace Backend.Web
 		}
 
 		[HttpGet]
+		[ProducesResponseType(StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		public IActionResult GetAllCompanies()
 		{
 			try
@@ -39,6 +36,8 @@ namespace Backend.Web
 
 		[HttpDelete]
 		[Route("{Id}")]
+		[ProducesResponseType(StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		public IActionResult Delete(Guid Id)
 		{
 			try
@@ -49,6 +48,42 @@ namespace Backend.Web
 				return Ok();
 			}
 			catch (ArgumentException ex)
+			{
+				return BadRequest(ex.Message);
+			}
+		}
+
+		[HttpPut]
+		[ProducesResponseType(StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status400BadRequest)]
+		public IActionResult Update(PartnerCompany company)
+		{
+			try
+			{
+				_repository.Add(company);
+				_repository.Save();
+
+				return Ok();
+			}
+			catch (ArgumentException ex)
+			{
+				return BadRequest(ex.Message);
+			}
+		}
+
+		[HttpPost]
+		[ProducesResponseType(StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status400BadRequest)]
+		public IActionResult Add(PartnerCompany company)
+		{
+			try
+			{
+				_repository.Add(company);
+				_repository.Save();
+
+				return Ok();
+			}
+			catch(ArgumentException ex)
 			{
 				return BadRequest(ex.Message);
 			}

@@ -13,8 +13,14 @@ namespace Backend.Data.Entities
 		[Column("Name")]
 		public string Name { get; set; }
 
+		[Column("OwnerId")]
+		public Guid OwnerId { get; set; }
+
 		[ForeignKey("OwnerId")]
 		public Contact Owner { get; set; }
+
+		[Column("PartnerTypeId")]
+		public Guid PartnerTypeId { get; set; }
 
 		[ForeignKey("PartnerTypeId")]
 		public PartnerType PartnerType { get; set; }

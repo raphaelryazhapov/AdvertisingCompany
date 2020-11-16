@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Backend.Data.Repositories
 {
@@ -12,9 +11,9 @@ namespace Backend.Data.Repositories
 	{
 		private readonly AdvertisingCompanyContext _context;
 
-		public PartnerCompanyRepository()
+		public PartnerCompanyRepository(AdvertisingCompanyContext context)
 		{
-			_context = new AdvertisingCompanyContext();
+			_context = context;
 		}
 
 		public void Add(PartnerCompany itemToAdd)
@@ -32,7 +31,7 @@ namespace Backend.Data.Repositories
 
 			if (!CheckIfExists(Id))
 			{
-				throw new ArgumentException("Пользователь с таким Id не найден");
+				throw new ArgumentException("Компания с таким Id не найдена");
 			}
 
 			var companyToRemove = GetById(Id);
@@ -47,7 +46,7 @@ namespace Backend.Data.Repositories
 
 			if (!CheckIfExists(Id))
 			{
-				throw new ArgumentException("Пользователь с таким Id не найден");
+				throw new ArgumentException("Компания с таким Id не найдена");
 			}
 
 			return _context
@@ -70,6 +69,11 @@ namespace Backend.Data.Repositories
 		public void Update(PartnerCompany itemToUpdate)
 		{
 			ArgumentValidator.ValidateObjectNotNull(itemToUpdate, nameof(itemToUpdate));
+
+			if (!CheckIfExists(itemToUpdate.Id))
+			{
+				throw new ArgumentException("Компания с таким Id не найдена");
+			}
 
 			_context
 				.Entry(itemToUpdate)
