@@ -14,6 +14,6 @@ jobs:
        with:
          dotnet-version: "3.1.x"
      - name: "Build sln"
-       run: dotnet build
+     - run: dotnet build
       
      
