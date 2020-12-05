@@ -1,0 +1,4 @@
+name: Do some useless stuff
+on:
+  push:
+    branches: [ master ]
