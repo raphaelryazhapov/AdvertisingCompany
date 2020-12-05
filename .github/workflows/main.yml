@@ -7,7 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      backend_sln: "Backend/Backend.sln" 
+      backend_sln: "Backend/Backend.sln"
+      project_path: "webapi"
     name: ".Net Core Build"
     steps:
       - uses: actions/checkout@v2
@@ -27,6 +28,6 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          script: cd ${{ secrets.PROJECT_PATH }} && git pull
+          script: cd $project_path && git pull
       
      
