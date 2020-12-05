@@ -1,3 +1,5 @@
+![Do some useless stuff](https://github.com/raphaelryazhapov/AdvertisingCompany/workflows/Do%20some%20useless%20stuff/badge.svg?branch=master)
+
 ## About
 
 #### This is project of Adevrtising Company - there are several Advertisement block types and companies, which can by this blocks.
