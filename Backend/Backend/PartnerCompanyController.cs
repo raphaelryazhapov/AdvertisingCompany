@@ -3,6 +3,7 @@ using Backend.Data;
 using Backend.Data.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NLog;
 
 namespace Backend.Web
 {
@@ -12,9 +13,12 @@ namespace Backend.Web
 	{
 		private readonly IRepository<PartnerCompany> _repository;
 
-		public PartnerCompanyController(IRepository<PartnerCompany> repository)
+		private readonly ILogger _logger;
+
+		public PartnerCompanyController(IRepository<PartnerCompany> repository, ILogger logger)
 		{
 			_repository = repository;
+			_logger = logger;
 		}
 
 		[HttpGet]
@@ -31,6 +35,12 @@ namespace Backend.Web
 			catch (ArgumentException ex)
 			{
 				return BadRequest(ex.Message);
+			}
+			catch (Exception ex)
+			{
+				var token = Guid.NewGuid();
+				_logger.Error($"Token = {token}. Error - {ex}");
+				return StatusCode(500, $"An error has occurred. See logs for more information, token - {token}");
 			}
 		}
 
@@ -51,6 +61,12 @@ namespace Backend.Web
 			{
 				return BadRequest(ex.Message);
 			}
+			catch (Exception ex)
+			{
+				var token = Guid.NewGuid();
+				_logger.Error($"Token = {token}. Error - {ex}");
+				return StatusCode(500, $"An error has occurred. See logs for more information, token - {token}");
+			}
 		}
 
 		[HttpPut]
@@ -69,6 +85,12 @@ namespace Backend.Web
 			{
 				return BadRequest(ex.Message);
 			}
+			catch (Exception ex)
+			{
+				var token = Guid.NewGuid();
+				_logger.Error($"Token = {token}. Error - {ex}");
+				return StatusCode(500, $"An error has occurred. See logs for more information, token - {token}");
+			}
 		}
 
 		[HttpPost]
@@ -86,6 +108,12 @@ namespace Backend.Web
 			catch(ArgumentException ex)
 			{
 				return BadRequest(ex.Message);
+			}
+			catch (Exception ex)
+			{
+				var token = Guid.NewGuid();
+				_logger.Error($"Token = {token}. Error - {ex}");
+				return StatusCode(500, $"An error has occurred. See logs for more information, token - {token}");
 			}
 		}
 	}

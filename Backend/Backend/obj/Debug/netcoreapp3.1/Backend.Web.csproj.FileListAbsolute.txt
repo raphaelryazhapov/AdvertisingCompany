@@ -68,8 +68,12 @@ C:\Users\Raphael\Desktop\Sql\Backend\Backend\bin\Debug\netcoreapp3.1\Microsoft.O
 C:\Users\Raphael\Desktop\Sql\Backend\Backend\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Raphael\Desktop\Sql\Backend\Backend\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Raphael\Desktop\Sql\Backend\Backend\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Raphael\Desktop\Sql\Backend\Backend\bin\Debug\netcoreapp3.1\Backend.Web.xml
+C:\Users\Raphael\Desktop\Sql\Backend\Backend\obj\Debug\netcoreapp3.1\Backend.Web.xml
+C:\Users\Raphael\Desktop\Sql\Backend\Backend\bin\Debug\netcoreapp3.1\nlog.config
+C:\Users\Raphael\Desktop\Sql\Backend\Backend\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\Raphael\Desktop\Sql\Backend\Backend\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\Raphael\Desktop\Sql\Backend\Backend\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
 C:\Users\Raphael\Desktop\Sql\Backend\Backend\obj\Debug\netcoreapp3.1\Backend.Web.csproj.CoreCompileInputs.cache
 C:\Users\Raphael\Desktop\Sql\Backend\Backend\obj\Debug\netcoreapp3.1\Backend.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Raphael\Desktop\Sql\Backend\Backend\obj\Debug\netcoreapp3.1\Backend.Web.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Raphael\Desktop\Sql\Backend\Backend\bin\Debug\netcoreapp3.1\Backend.Web.xml
-C:\Users\Raphael\Desktop\Sql\Backend\Backend\obj\Debug\netcoreapp3.1\Backend.Web.xml

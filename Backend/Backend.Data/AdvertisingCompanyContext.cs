@@ -16,14 +16,10 @@ namespace Backend.Data
 		public DbSet<AdBlock> AdBlocks { get; set; }
 
 
-		public AdvertisingCompanyContext()
+		public AdvertisingCompanyContext(DbContextOptions options)
+			: base(options)
 		{
 			this.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
-		}
-
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{
-			optionsBuilder.UseSqlServer("Server=DESKTOP-I1H5PRJ;Database=AdvertisingAgency;Trusted_Connection=True;");
 		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
