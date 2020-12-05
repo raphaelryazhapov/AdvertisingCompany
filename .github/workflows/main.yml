@@ -15,7 +15,7 @@ jobs:
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: ${{ matrix.dotnet }}
+          dotnet-version: "3.1.x"
       - name: "Restore NuGet packages"
         run: dotnet restore $backend_sln
       - name: "Build solution"
@@ -28,6 +28,6 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          script: cd $project_path && git pull
+          script: whoami
       
      
