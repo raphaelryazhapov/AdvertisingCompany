@@ -13,6 +13,9 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ matrix.dotnet }}
-      - run: dotnet build "Backend/Backend.sln"
+      - name: "Build solution"
+        run: dotnet build "Backend/Backend.sln"
+      - name: "Run tests"
+        run: dotnet test "Backend/Backend.sln"
       
      
