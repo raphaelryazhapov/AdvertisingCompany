@@ -29,6 +29,6 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           envs: project_path 
-          script: cd $project_path && git pull
+          script: cd $project_path && touch hello.txt
       
      
