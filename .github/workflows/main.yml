@@ -13,6 +13,6 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ matrix.dotnet }}
-      - run: dotnet build "../../Backend/Backend.sln"
+      - run: dotnet build "Backend/Backend.sln"
       
      
