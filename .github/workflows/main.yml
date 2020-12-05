@@ -6,6 +6,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      backend_sln: "Backend/Backend.sln" 
     name: ".Net Core Build"
     steps:
       - uses: actions/checkout@v2
@@ -13,9 +15,11 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ matrix.dotnet }}
+      - name: "Restore NuGet packages"
+        run: dotnet restore $backend_sln
       - name: "Build solution"
-        run: dotnet build "Backend/Backend.sln"
+        run: dotnet build $backend_sln
       - name: "Run tests"
-        run: dotnet test "Backend/Backend.sln"
+        run: dotnet test $backend_sln
       
      
