@@ -1,0 +1,11 @@
+name: Do some useless stuff
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  useless stuff:
+   runs-on: ubuntu-latest
+   steps:
+     - name: useless stuff 1
+     
