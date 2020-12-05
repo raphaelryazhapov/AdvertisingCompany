@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using Newtonsoft.Json;
 
 namespace Backend.Data.Entities
 {
@@ -14,7 +15,7 @@ namespace Backend.Data.Entities
 		public string Name { get; set; }
 
 		[Column("OwnerId")]
-		public Guid OwnerId { get; set; }
+		public Guid? OwnerId { get; set; }
 
 		[ForeignKey("OwnerId")]
 		public Contact Owner { get; set; }
@@ -26,8 +27,9 @@ namespace Backend.Data.Entities
 		public PartnerType PartnerType { get; set; }
 
 		[Column("AdBlockCount")]
-		public int AdBlockCount { get; set; }
+		public int? AdBlockCount { get; set; }
 
+		[JsonIgnore]
 		public ICollection<AdBlock> AdBlocks { get; set; }
 	}
 }

@@ -18,7 +18,7 @@ namespace Backend.Data
 
 		public AdvertisingCompanyContext()
 		{
-			Database.EnsureCreated();
+			this.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
 		}
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

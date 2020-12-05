@@ -19,10 +19,13 @@ namespace Backend.Data.Repositories
 		public void Add(PartnerCompany itemToAdd)
 		{
 			ArgumentValidator.ValidateObjectNotNull(itemToAdd, nameof(itemToAdd));
-
 			_context
 				.PartnerCompanies
 				.Add(itemToAdd);
+
+			_context.SaveChanges();
+
+			_context.Entry(itemToAdd).State = EntityState.Detached;
 		}
 
 		public void DeleteById(Guid Id)
@@ -38,6 +41,8 @@ namespace Backend.Data.Repositories
 			_context
 				.PartnerCompanies
 				.Remove(companyToRemove);
+
+			_context.SaveChanges();
 		}
 
 		public PartnerCompany GetById(Guid Id)
@@ -48,7 +53,6 @@ namespace Backend.Data.Repositories
 			{
 				throw new ArgumentException("Компания с таким Id не найдена");
 			}
-
 			return _context
 				.PartnerCompanies
 				.Include(company => company.Owner)
@@ -76,8 +80,11 @@ namespace Backend.Data.Repositories
 			}
 
 			_context
-				.Entry(itemToUpdate)
-				.State = EntityState.Modified;
+				.Update(itemToUpdate);
+
+			_context.SaveChanges();
+
+			_context.Entry(itemToUpdate).State = EntityState.Detached;
 		}
 
 		public bool CheckIfExists(Guid Id)
@@ -86,8 +93,7 @@ namespace Backend.Data.Repositories
 
 			return _context
 				.PartnerCompanies
-				.FirstOrDefault(company => company.Id == Id)
-				!= null;
+				.Any(company => company.Id == Id);
 		}
 
 		public void Save()

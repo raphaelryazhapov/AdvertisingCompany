@@ -60,7 +60,7 @@ namespace Backend.Web
 		{
 			try
 			{
-				_repository.Add(company);
+				_repository.Update(company);
 				_repository.Save();
 
 				return Ok();

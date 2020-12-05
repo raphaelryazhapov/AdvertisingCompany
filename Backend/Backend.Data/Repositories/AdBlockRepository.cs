@@ -80,8 +80,7 @@ namespace Backend.Data.Repositories
 
 			return _context
 				.AdBlocks
-				.FirstOrDefault(adBlock => adBlock.Id == Id)
-				!= null;
+				.Any(adBlock => adBlock.Id == Id);
 		}
 
 		public void Save()

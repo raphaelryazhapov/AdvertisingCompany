@@ -14,8 +14,8 @@ BEGIN
 	DECLARE @PartnerAdBlockCount INT = (
 		SELECT
 			COUNT(*)
-			FROM AdBlock
-			WHERE AdBlock.CompanyId = @CompanyId
+		FROM AdBlock
+		WHERE AdBlock.CompanyId = @CompanyId
 	);
 	DECLARE @AvgAdBlockCost FLOAT = (
 		SELECT
