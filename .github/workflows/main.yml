@@ -8,4 +8,5 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: useless stuff 1
+       uses: actions/checkout@master
      
