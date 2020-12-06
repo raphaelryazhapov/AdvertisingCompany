@@ -19,3 +19,8 @@
 ### Frontend
 #### contains all UI of project
 #### Tools - JavaScript, Vue.js, Vue router, Vuetify
+
+
+## Usage
+### Run ASP.NET Core Web API Project - dotnet run --project Backend/Backend/Backend.Web.csproj
+### Run Vue.js project - cd Frontent/vue.js/ && npm run serve
